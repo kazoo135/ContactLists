@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'contact-item',
@@ -7,5 +7,9 @@ import { Component } from '@angular/core';
 })
 
 export class ContactItemComponent {
-  
+  @Input() contactItem: any;
+
+onDelete() {
+  console.log( 'Contact Removed');
+}
 }

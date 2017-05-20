@@ -6,5 +6,20 @@ import { Component } from '@angular/core';
   styleUrls: ['./css/app.component.css']
 })
 export class AppComponent  {
-  name = 'Angular';
+
+ firstContact = {
+    name: 'Salvatore Caruso',
+    address: {
+      street: '325 Fanning Rd.',
+      city: 'Wycoff',
+      state: 'NJ',
+      zip: '07656'
+    },
+    phone: {
+      home: '201-444-9878',
+      mobile: '545-969-8888',
+      work: ''
+    }
+  };
+
 }
