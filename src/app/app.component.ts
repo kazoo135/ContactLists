@@ -22,7 +22,7 @@ export class AppComponent  {
     },
    email: {
       primary: 'scatuso@yahoo.com',
-     secondary: 'scaruso@example.com'
+     secondary: ''
    }
   };
   onContactItemDelete(contactItem: any) {

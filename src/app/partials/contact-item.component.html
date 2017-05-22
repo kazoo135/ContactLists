@@ -15,7 +15,7 @@
   <div class="email">
     <h3>Email</h3>
     <p>{{contactItem.email.primary}}</p>
-    <p>{{contactItem.email.secondary}}</p>
+    <p *ngIf="contactItem.email.secondary">{{contactItem.email.secondary}}</p>
   </div>
     <div class="manage-contact">
       <a class="details">Add Details</a>
