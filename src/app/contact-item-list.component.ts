@@ -10,11 +10,13 @@ export class ContactItemListComponent {
   contactItems = [
     {
       name: 'Christopher McLeod',
+      relation: 'friend',
       address: {
         street: '225 West 57th street',
         city: 'New York',
         state: 'NY',
-        zip: '10048'
+        zip: '10048',
+
       },
       phone: {
         home: '212-444-9878',
@@ -24,10 +26,11 @@ export class ContactItemListComponent {
       email: {
         primary: 'christopher@gmail.com',
         secondary: 'christopher@floweringtree.org'
-      }
+      },
     },
     {
       name: 'Christine Crawely',
+      relation: 'family',
       address: {
         street: '22 Pine Road',
         city: 'Glen Rock',
@@ -42,10 +45,11 @@ export class ContactItemListComponent {
       email: {
         primary: '',
         secondary: ''
-      }
+      },
     },
     {
       name: 'Peter Ruccione',
+      relation: 'family',
       address: {
         street: '11 Hillside Rd',
         city: 'Ringwood',
@@ -60,9 +64,7 @@ export class ContactItemListComponent {
       email: {
         primary: '',
         secondary: ''
-      }
-
-
+      },
     }
   ];
 

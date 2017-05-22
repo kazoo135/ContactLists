@@ -1,4 +1,7 @@
 <section>
-  <contact-item *ngFor="let contactItem of contactItems"
+  <contact-item
+    *ngFor="let contactItem of contactItems"
+    [ngClass]="{ 'family': contactItems.relation === 'family',
+    'friend': contactItems.relations === 'friend'}"
   [contactItem]="contactItem" (delete)="onContactItemDelete($event)"></contact-item>
 </section>

@@ -7,3 +7,11 @@
 .flex-item{
   margin: 10px;
 }
+.family{
+  font-weight: bold;
+
+}
+.friend{
+  font-style: italic;
+}
+
