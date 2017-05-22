@@ -1,4 +1,4 @@
 <section>
   <contact-item *ngFor="let contactItem of contactItems"
-  [contactItem]="contactItem"></contact-item>
+  [contactItem]="contactItem" (delete)="onContactItemDelete($event)"></contact-item>
 </section>
