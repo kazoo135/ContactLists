@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'contact-item',
@@ -8,8 +8,10 @@ import { Component, Input } from '@angular/core';
 
 export class ContactItemComponent {
   @Input() contactItem: any;
+  @Output() delete = new EventEmitter();
 
 onDelete() {
   console.log( 'Contact Removed');
+  this.delete.emit(this.contactItem);
 }
 }

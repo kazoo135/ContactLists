@@ -18,8 +18,13 @@ export class AppComponent  {
     phone: {
       home: '201-444-9878',
       mobile: '545-969-8888',
-      work: ''
-    }
+      work: '454-678-4325'
+    },
+   email: {
+      primary: 'scatuso@yahoo.com',
+     secondary: 'scaruso@example.com'
+   }
   };
-
+  onContactItemDelete(contactItem: any) {
+  }
 }

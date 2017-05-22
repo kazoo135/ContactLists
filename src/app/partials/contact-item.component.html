@@ -1,13 +1,25 @@
 <section class="contact-container">
-  <div class="contact"></div>
-  <h2>{{ contactItem.name}}</h2>
-  <p>{{ contactItem.street}}</p>
-  <p>{{ contactItem.address.city}}, {{ contactItem.address.state}},
-    {{ contactItem.address.zip}}</p>
-  <p>212-876-3232</p>
-<div class="manage-contact">
-  <a class="details">Add Details</a>
-  <a class="delete" (click)="onDelete()">Remove</a>
-</div>
+    <h2>{{ contactItem.name}}</h2>
+  <div class="address">
+    <h3>Address</h3>
+    <p>{{ contactItem.address.street}}</p>
+    <p>{{ contactItem.address.city}}, {{ contactItem.address.state}},
+      {{ contactItem.address.zip}}</p>
+  </div>
+    <div class="phone-number">
+      <h3>Phone</h3>
+      <p *ngIf="contactItem.phone.home">Home: {{contactItem.phone.home}}</p>
+      <p *ngIf="contactItem.phone.mobile">Mobile: {{contactItem.phone.mobile}}</p>
+      <p *ngIf="contactItem.phone.work">Work: {{contactItem.phone.work}}</p>
+    </div>
+  <div class="email">
+    <h3>Email</h3>
+    <p>{{contactItem.email.primary}}</p>
+    <p>{{contactItem.email.secondary}}</p>
+  </div>
+    <div class="manage-contact">
+      <a class="details">Add Details</a>
+      <a class="delete" (click)="onDelete()">Remove</a>
+    </div>
 </section>
 
