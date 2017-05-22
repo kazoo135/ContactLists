@@ -8,10 +8,10 @@
   margin: 10px;
 }
 .family{
-  font-weight: bold;
+  color: orange;
 
 }
 .friend{
-  font-style: italic;
+color: lightcoral;
 }
 
