@@ -1,23 +1,24 @@
 <section class="contact-container">
     <h2>{{ contactItem.name}}</h2>
-  <div class="address">
+  <div class="address flex-item">
     <h3>Address</h3>
     <p>{{ contactItem.address.street}}</p>
     <p>{{ contactItem.address.city}}, {{ contactItem.address.state}},
       {{ contactItem.address.zip}}</p>
   </div>
-    <div class="phone-number">
+    <div class="phone-number flex-item" >
       <h3>Phone</h3>
       <p *ngIf="contactItem.phone.home">Home: {{contactItem.phone.home}}</p>
       <p *ngIf="contactItem.phone.mobile">Mobile: {{contactItem.phone.mobile}}</p>
       <p *ngIf="contactItem.phone.work">Work: {{contactItem.phone.work}}</p>
     </div>
-  <div class="email">
+  <div class="email flex-item">
     <h3>Email</h3>
     <p>{{contactItem.email.primary}}</p>
     <p *ngIf="contactItem.email.secondary">{{contactItem.email.secondary}}</p>
   </div>
-    <div class="manage-contact">
+    <div class="manage-contact flex-item">
+      <h3>Manage Contacts</h3>
       <a class="details">Add Details</a>
       <a class="delete" (click)="onDelete()">Remove</a>
     </div>
