@@ -15,4 +15,15 @@
 .friend{
 color: lightcoral;
 }
-
+.addItem{
+  background-color: orange;
+  width:25px;
+  font-weight: bold;
+  cursor: pointer;
+}
+.deleteItem{
+  background-color: red;
+width:25px;
+  font-weight: bold;
+  cursor: pointer;
+}
