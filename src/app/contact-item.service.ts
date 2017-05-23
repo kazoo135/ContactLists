@@ -66,7 +66,9 @@ export class ContactItemService {
   ];
 
   get() {
+    console.log('get method from service');
     return this.contactItems;
+
   };
   add(contactItem: any) {
     this.contactItems.push(contactItem);

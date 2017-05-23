@@ -8,11 +8,12 @@ import { ContactItemService } from './contact-item.service';
 })
 
 export class ContactItemListComponent {
+  contactItems: any;
 
 
   constructor( private  contactItemServ: ContactItemService) {}
   ngOnInit() {
-    this.contactItemServ.get();
+    this.contactItems = this.contactItemServ.get();
   }
 
   onContactItemDelete(contactItem: any) {
