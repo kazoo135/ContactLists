@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { Validators, FormBuilder} from '@angular/forms';
+import { ContactItemService } from './contact-item.service';
 
 
 @Component({
@@ -10,7 +11,7 @@ import { Validators, FormBuilder} from '@angular/forms';
 
 export class ContactItemFormComponent {
   form: any;
-  constructor(private formBuilder: FormBuilder) {}
+  constructor(private formBuilder: FormBuilder, private contactItemServ: ContactItemService) {}
   ngOnInit() {
     this.form = this.formBuilder.group({
       name: this.formBuilder.control('', Validators.compose([Validators.required])),
@@ -28,6 +29,7 @@ export class ContactItemFormComponent {
   onSubmit(contactItem: any) {
   console.log(contactItem);
   console.log('Name: ' + contactItem.name);
+  this.contactItemServ.add(contactItem);
   }
 
 }
