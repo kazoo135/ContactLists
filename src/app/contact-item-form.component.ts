@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import {FormGroup, FormControl, Validators} from '@angular/forms';
+import { Validators, FormBuilder} from '@angular/forms';
 
 
 @Component({
@@ -10,18 +10,19 @@ import {FormGroup, FormControl, Validators} from '@angular/forms';
 
 export class ContactItemFormComponent {
   form: any;
+  constructor(private formBuilder: FormBuilder) {}
   ngOnInit() {
-    this.form = new FormGroup({
-      name: new FormControl('', Validators.compose([Validators.required])),
-      relationship: new FormControl('family'),
-      street: new FormControl(''),
-      city: new FormControl(''),
-      state: new FormControl(''),
-      'home-phone': new FormControl(''),
-      'work-phone': new FormControl(''),
-      'mobile-phone': new FormControl(''),
-      'primary-email': new FormControl(''),
-      'secondary-email': new FormControl('')
+    this.form = this.formBuilder.group({
+      name: this.formBuilder.control('', Validators.compose([Validators.required])),
+      relationship: this.formBuilder.control('family'),
+      street: this.formBuilder.control(''),
+      city: this.formBuilder.control(''),
+      state: this.formBuilder.control(''),
+      'home-phone': this.formBuilder.control(''),
+      'work-phone': this.formBuilder.control(''),
+      'mobile-phone': this.formBuilder.control(''),
+      'primary-email': this.formBuilder.control(''),
+      'secondary-email': this.formBuilder.control('')
     });
   }
   onSubmit(contactItem: any) {
