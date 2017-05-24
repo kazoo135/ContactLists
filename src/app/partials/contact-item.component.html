@@ -3,14 +3,13 @@
   <div class="address flex-item">
     <h3>Address</h3>
     <p>{{ contactItem.address.street}}</p>
-    <p>{{ contactItem.address.city}}, {{ contactItem.address.state}},
-      {{ contactItem.address.zip}}</p>
+    <p>{{ contactItem.address.city}}, {{ contactItem.address.state}}</p>
   </div>
     <div class="phone-number flex-item" >
       <h3>Phone</h3>
-      <p *ngIf="contactItem.phone.home">Home: {{contactItem.phone.home}}</p>
-      <p *ngIf="contactItem.phone.mobile">Mobile: {{contactItem.phone.mobile}}</p>
-      <p *ngIf="contactItem.phone.work">Work: {{contactItem.phone.work}}</p>
+      <p>Home: {{contactItem.phone.home}}</p>
+      <p>Mobile: {{contactItem.phone.mobile}}</p>
+      <p>Work: {{contactItem.phone.work}}</p>
     </div>
   <div class="email flex-item">
     <h3>Email</h3>

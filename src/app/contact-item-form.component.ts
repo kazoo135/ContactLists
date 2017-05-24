@@ -28,7 +28,6 @@ export class ContactItemFormComponent {
   }
   onSubmit(contactItem: any) {
   console.log(contactItem);
-  console.log('Name: ' + contactItem.name);
   this.contactItemServ.add(contactItem);
   }
 

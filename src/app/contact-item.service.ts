@@ -1,7 +1,7 @@
 export class ContactItemService {
 
 
-  contactItems = [
+  contactItems: any[] = [
     {
       id: 1,
       name: 'Christopher McLeod',
@@ -72,6 +72,7 @@ export class ContactItemService {
   };
   add(contactItem: any) {
     this.contactItems.push(contactItem);
+    console.log(this.contactItems);
   };
   delete(contactItem: any) {
     let index = this.contactItems.indexOf(contactItem);
