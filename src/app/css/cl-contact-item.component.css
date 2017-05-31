@@ -1,0 +1,41 @@
+.contact-item-container{
+  background-color: lightblue;
+  border: 1px solid #369;
+  border-radius: 8px;
+}
+.contact-name{
+  color: #19535D;
+  font-size: 1.8em;
+  margin-left: 10%;
+}
+.contact-details{
+  color:#19535D;
+  margin-left: 10%;
+}
+.contact-details h3{
+  margin-bottom: 0%;
+  font-size: 1.4em;
+}
+.contact-details p{
+  font-size: 1.2em;
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+.contact-phone-email{
+  color:#19535D;
+  margin-left: 10%;
+}
+
+.contact-phone-email h3{
+  margin-bottom: 2px;
+  font-size: 1.4em;
+}
+.contact-phone-email p{
+  margin-top: 0;
+  margin-bottom: 5px;
+  font-size: 1.2em;
+}
+.contact-phone-email p span{
+  font-weight: bold;
+}

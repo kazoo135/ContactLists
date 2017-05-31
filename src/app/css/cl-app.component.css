@@ -13,6 +13,5 @@ header p{
   text-align: center;
   font-size: 175%;
   margin-top: 0%;
-  text-decoration: underline;
-  text-decoration-color: #FA8258;
+  text-decoration: none;
 }
