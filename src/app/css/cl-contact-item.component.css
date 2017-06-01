@@ -2,6 +2,7 @@
   background-color: lightblue;
   border: 1px solid #369;
   border-radius: 8px;
+  margin-bottom: 10px;
 }
 .contact-name{
   color: #19535D;
@@ -39,3 +40,32 @@
 .contact-phone-email p span{
   font-weight: bold;
 }
+
+.tools{
+  border: 1px solid darkslateblue;
+  height:40px;
+}
+.tools ul{
+  list-style-type: none;
+}
+.tools ul li{
+  display: inline-block;
+}
+.tools a{
+  cursor: pointer;
+  border: 1px solid black;
+  width:150px;
+  height: 25px;
+  font-weight:bold;
+  margin-top: 10px;
+}
+.delete{
+  background-color: red;
+  margin-left:15px;
+}
+
+.edit{
+  background-color: lightyellow;
+  margin-left:15px;
+}
+
