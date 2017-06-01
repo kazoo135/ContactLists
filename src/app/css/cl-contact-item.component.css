@@ -69,3 +69,18 @@
   margin-left:15px;
 }
 
+.grid_row{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.grid_item{
+  flex: 1;
+  border: 1px solid steelblue;
+}
+
+@media all and (max-width: 560px){
+  .grid_row{
+    flex-direction: column;
+  }
+}

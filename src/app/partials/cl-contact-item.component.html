@@ -1,18 +1,18 @@
-<section class="contact-item-container">
-  <header><h1 class="contact-name">{{contactItem.firstname}}
+<section class="contact-item-container grid_row">
+  <header class="grid_item"><h1 class="contact-name">{{contactItem.firstname}}
   {{contactItem.lastname}}</h1></header>
-<div class="contact-details">
+<div class="contact-details grid_item">
   <h3>Relationship</h3>
-  <p>{{contactItem.relationship}}</p>
-  <h3>Birthday</h3>
-  <p>{{contactItem.birthday}}</p>
-  <h3>Andress:</h3>
-  <p>{{contactItem.address.home.street}}</p>
-  <p>{{contactItem.address.home.city}},
+  <p class="flex_item">{{contactItem.relationship}}</p>
+  <h3 class="flex_col">Birthday</h3>
+  <p class="flex_item">{{contactItem.birthday}}</p>
+  <h3 class="flex_col">Andress:</h3>
+  <p class="flex_item">{{contactItem.address.home.street}}</p>
+  <p flex_item>{{contactItem.address.home.city}},
     {{contactItem.address.home.state}},
   {{contactItem.address.home.zipcode}}</p>
 </div>
-  <div class="contact-phone-email">
+  <div class="contact-phone-email grid_item">
     <h3>Phone</h3>
     <p><span>Home</span>{{contactItem.phone.home}}</p>
     <p><span>Mobile</span>: {{contactItem.phone.mobile}}</p>
@@ -21,7 +21,7 @@
     <p><span>Home</span>: {{contactItem.email.primary}}</p>
     <p><span>Work</span>: {{contactItem.email.secondary}}</p>
   </div>
-  <div class="tools">
+  <div class="tools grid_item">
     <ul>
       <li class="delete"><a (click)="onDelete()" >Delete</a></li>
       <li class="edit"><a (click)="onEdit()">Edit</a></li>
