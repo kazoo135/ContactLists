@@ -9,6 +9,7 @@ import { ContactItemComponent } from './cl-contact-item.component';
 @NgModule({
   imports: [BrowserModule],
   declarations: [AppComponent, ContactItemComponent],
+  bootstrap: [AppComponent]
 })
 
 
