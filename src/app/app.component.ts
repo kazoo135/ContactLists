@@ -38,9 +38,9 @@ export class AppComponent  {
     }
   };
 
-  onContactItemDelete( contactItem: any) {
-    console.log(contactItem);
-
-  }
+  //  onContactItemDelete( contactItem: any) {
+  //   console.log(contactItem);
+  //
+  // }
 
 }
