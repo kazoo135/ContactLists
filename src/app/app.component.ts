@@ -40,5 +40,7 @@ export class AppComponent  {
 
   onContactItemDelete( contactItem: any) {
     console.log(contactItem);
+
   }
+
 }
