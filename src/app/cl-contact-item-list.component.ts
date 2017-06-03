@@ -2,8 +2,8 @@ import { Component } from '@angular/core';
 
 @Component({
   selector: 'cl-contact-item-list',
-  templateUrl: '/partials/cl-contact-item-list.html',
-  styleUrls: ['/css/cl-contact-item-list.css']
+  templateUrl: './partials/cl-contact-item-list.component.html',
+  styleUrls: ['./css/cl-contact-item-list.component.css']
 
 })
 
@@ -13,87 +13,45 @@ export class ContactItemListComponent {
       id: 1,
       firstname: 'Ben',
       lastname: 'Sargent',
+      birthday: 'Jan 9 1967',
       relationship: 'friend',
-      birthday: 'January 9, 1955',
-      address: {
-        home: {
-          street: '238 whitehall Rd',
-          city: 'Denver',
-          state: 'Colorado',
-          zipcode: '100019'
-        },
-        work: {
-          street: '838 Maple Drive',
-          city: 'Denver',
-          state: 'Colorado',
-          zipcode: '100987',
-        },
+      addr: {
+        street: '23 Maple Road',
+        city: 'Littleton',
+        state: 'Colorado',
+        zipcode: '10012'
       },
       phone: {
-        home: '393-899-1234',
-        mobile: '837-999-7373',
-        work: '837-182-8888'
+        home: '345-444-3333',
+        mobile: '646-999-4321',
+        work: '212-555-4323'
       },
-      email: {
-        primary: 'bsargent@gmail.com',
-        secondary: 'ben@example.com'
-      },
-    },
-    {
-      id: 2,
-      firstname: 'Christopher',
-      lastname: 'McLeod',
-      relationship: 'friend',
-      birthday: 'January 7, 1965',
-      address: {
-        home: {
-          street: '225 West 57th street',
-          city: 'New York',
-          state: 'New York',
-          zipcode: '10017'
-        },
-        work: {
-          street: '',
-          city: '',
-          state: '',
-          zipcode: '',
-        },
-      },
-      phone: {
-        home: '212-898-4544',
-        mobile: '646-555-1212',
-        work: ''
-      },
-      email: {
-        primary: 'christopher@gmail.com',
-        secondary: 'cmcleod@floweringtree.org'
+      mail: {
+        primary: 'bs@gmail.com',
+        secondary: 'ben@work.org'
       }
     },
     {
-    id: 3,
-    firstname: 'Salvatore',
-    lastname: 'Caruso',
-    relationship: 'family',
-    birthday: 'October 18, 1926',
-    address: {
-      home: {
-        street: '25 Faning Rd.',
+      id: 2,
+      firstname: 'Sal',
+      lastname: 'Caruso',
+      birthday: 'Oct. 18 1926',
+      relationship: 'family',
+      addr: {
+        street: '23 faner Rd.',
         city: 'Wycoff',
-        state: 'New Jersey',
-        zipcode: '08348'
+        state: 'New Jersery',
+        zipcode: '00012'
       },
-      work: {
+      phone: {
+        home: '345-444-3333',
+        mobile: '646-999-4321',
+        work: '212-555-4323'
       },
-    },
-    phone: {
-      home: '201-454-3838',
-      mobile: 'none',
-      work: 'none'
-    },
-    email: {
-      primary: 'scatuso@yahoo.com',
-      secondary: 'scaruso@gmail.com'
-    }
+      mail: {
+        primary: 'scatuso@gmail.com',
+        secondary: 'sc@work.org'
+      }
 }];
 
   onContactItemDelete(contactItem: any) {
