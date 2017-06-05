@@ -48,7 +48,7 @@ export class ContactItemFormComponent {
       'July', 'August', 'September', 'October', 'November', 'December'];
     // TODO eventually I want to figure out how to initialize days and years with loops
     this.days = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    // this.years = ['2001', '2002', '2003', '2004', '2006'];
+    this.years = ['2001', '2002', '2003', '2004', '2006'];
     // this.initDays();
     // this.initYears();
   }
