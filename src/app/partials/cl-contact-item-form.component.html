@@ -1,0 +1,69 @@
+<section>
+  <form>
+    <div>
+      <label>First Name:</label>
+      <input type="text" name="fname" id="fname">
+      <label for="lname">Last Name:</label>
+      <input type="text" name="lname" id="lname">
+    </div>
+    <div>
+      <h3>Relationship</h3>
+      <input type="radio" id="friend" name="relationship"><label>Friend</label>
+      <input type="radio" id="family" name="relationship"><label>Family</label>
+    </div>
+    <div>
+      <h3>Birthday</h3>
+      <p class="bDay"><label>Month</label><br>
+        <select name="month" id="month">
+          <option *ngFor="let month of months">{{month}}</option>
+        </select>
+      </p>
+      <p class="bDay"><label>Day</label><br>
+      <select>
+        <option *ngFor="let day of days">{{ day }}</option>
+      </select></p>
+      <p class="bDay"><label>Year</label><br>
+      <select>
+        <option *ngFor="let year of years">{{ year }}</option>
+      </select></p>
+    </div>
+    <div>
+      <h3>Address</h3>
+      <p>
+        <label>Street:</label><br>
+        <input type="text" name="street" id="street">
+      </p>
+      <p><label>city:</label><br>
+      <input type="text" id="city" name="city">
+      </p>
+      <p><label>State:</label><br>
+      <select name="state" id="state">
+        <option *ngFor="let state of states">{{ state.name }}</option>
+      </select>
+      </p>
+    </div>
+    <div id="phone">
+      <h3>Phone</h3>
+      <p>
+        <label>Home:</label>
+        <input type="text" id="hmPhone" name="hmPhone">
+      </p>
+      <p><label>Work</label>
+      <input type="text" id="wkPhone" name="wkPhone"></p>
+    </div>
+    <div>
+      <h3>Email</h3>
+      <p>
+      <label>Primary</label><br>
+      <input type="email" name="email1" id="email1">
+    </p>
+      <p>
+        <label>Secondary</label><br>
+        <input type="email" name="email2" id="email2">
+      </p>
+
+    </div>
+
+
+  </form>
+</section>
