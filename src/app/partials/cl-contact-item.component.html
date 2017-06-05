@@ -3,7 +3,8 @@
   {{contactItem.lastname}}</h1></header>
 <div class="contact-details grid_item">
   <h3>Relationship</h3>
-  <p>{{contactItem.relationship}}</p>
+  <p [ngClass]="{'friend': contactItem.relationship === 'friend',
+'family': contactItem.relationship === 'family'}">{{contactItem.relationship}}</p>
   <h3>Birthday</h3>
   <p>{{contactItem.birthday}}</p>
   <div>

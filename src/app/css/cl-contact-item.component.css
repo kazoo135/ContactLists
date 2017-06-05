@@ -78,7 +78,15 @@
   flex: 1;
   border: 1px solid steelblue;
 }
+.friend{
+  color:rgb(46,23,81);
+  font-weight: bold;
+}
+.family{
+  color:#a95c0c;
+  font-weight: bold;
 
+}
 @media all and (max-width: 560px){
   .grid_row{
     flex-direction: column;
