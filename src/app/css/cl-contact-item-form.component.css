@@ -1,5 +1,23 @@
+#formSection{
+  margin-bottom: 20px;
+  border: 1px solid orange;
+}
+
 .bDay{
   display: inline-block;
   margin-right: 15px;
   font-weight: bold;
+}
+.grid_row{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+}
+.grid_item{
+  flex: 1;
+  border: 1px solid steelblue;
+}
+
+#btn-submit{
+
 }

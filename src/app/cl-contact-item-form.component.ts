@@ -1,4 +1,5 @@
 import {Component} from '@angular/core';
+import { FormGroup, FormControl } from '@angular/forms';
 
 @Component({
   selector: 'cl-contact-item-form',
@@ -10,6 +11,7 @@ export class ContactItemFormComponent {
   months: any[];
   days: any;
   years: any;
+  form: any;
   states = [{
     name: 'Alabama',
     abbr: 'AL'
@@ -30,26 +32,31 @@ export class ContactItemFormComponent {
       name: 'California',
       abbr: 'CA'
     }];
-
-  initDays() {
-    for ( let i = 1; i < 32; i++) {
-      this.days[i] = i;
-    }
-  }
-
-  initYears() {
-    for ( let i = 2000; i < 2018; i++) {
-      this.years[i] = i;
-    }
-    console.log(this.years);
-  }
+// TODO write a function that initializes years property
+// TODO write a function that initializes days propery
   ngOnInit() {
     this.months = [ 'January', 'Feburary', 'March', 'April', 'May', 'June',
       'July', 'August', 'September', 'October', 'November', 'December'];
     // TODO eventually I want to figure out how to initialize days and years with loops
     this.days = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
     this.years = ['2001', '2002', '2003', '2004', '2006'];
-    // this.initDays();
-    // this.initYears();
+
+    // initialize form
+    this.form = new FormGroup({
+     fname: new FormControl(''),
+      lname: new FormControl(''),
+      relationship: new FormControl('friend'),
+      month: new FormControl(''),
+      day: new FormControl(''),
+      year: new FormControl(''),
+      street: new FormControl(''),
+      city: new FormControl(''),
+      state: new FormControl(''),
+      hmPhone: new FormControl(''),
+      wkPhone: new FormControl(''),
+      email1: new FormControl(''),
+      email2: new FormControl('')
+    });
+
   }
 } // End of ContactItemFormComponent class
