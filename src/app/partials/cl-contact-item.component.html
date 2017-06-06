@@ -5,7 +5,9 @@
   <h3>Relationship</h3>
   <p>{{contactItem.relationship}}</p>
   <h3>Birthday</h3>
-  <p>{{contactItem.birthday}}</p>
+  <p>{{contactItem.birthday.month}},
+    {{contactItem.birthday.day}},
+  {{ contactItem.birthday.year}}</p>
   <div>
     <h3>Address</h3>
     <p>{{contactItem.addr.street}}</p>
@@ -25,6 +27,7 @@
       <span>Work</span>: {{contactItem.mail.secondary}}</p>
   </div>
   <div class="tools grid_item">
+    <h3>Tools</h3>
     <ul>
       <li class="delete"><a (click)="onDelete()" >Delete</a></li>
       <li class="edit"><a (click)="onEdit()">Edit</a></li>

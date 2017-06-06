@@ -3,11 +3,15 @@
   (ngSubmit)="onSubmit(form.value)">
     <div class="grid_row">
       <div class="grid_item">
-        <label>First Name:</label>
-        <input type="text" name="fname" id="fname" formControlName="fname">
-        <label for="lname">Last Name:</label>
-        <input type="text" name="lname" id="lname" formControlName="lname">
-
+        <h3>Contact Name</h3>
+        <p>
+          <label>First Name:</label><br>
+          <input type="text" name="fname" id="fname" formControlName="fname">
+        </p>
+        <p>
+          <label for="lname">Last Name:</label><br>
+          <input type="text" name="lname" id="lname" formControlName="lname">
+        </p>
         <h3>Relationship</h3>
         <input type="radio" id="friend" name="relationship" value="friend" formControlName="relationship"><label>Friend</label>
         <input type="radio" id="family" name="relationship" value="family" formControlName="relationship"><label>Family</label>
@@ -46,10 +50,10 @@
       <div  class="grid_item" id="phone">
         <h3>Phone</h3>
         <p>
-          <label>Home:</label>
+          <label>Home:</label><br>
           <input type="text" id="hmPhone" name="hmPhone" formControlName="hmPhone">
         </p>
-        <p><label>Work</label>
+        <p><label>Work</label><br>
           <input type="text" id="wkPhone" name="wkPhone" formControlName="wkPhone"></p>
       </div>
       <div class="grid_item">
@@ -66,7 +70,8 @@
 
     </div><!--End of Row and items -->
       <div id="btn-submit">
-      <button type="submit" name="submit" id="submit">Add Contact</button>
+      <button type="submit" name="submit"
+              id="submit" [disabled]="!form.valid">Add Contact</button>
     </div>
   </form>
 </section>

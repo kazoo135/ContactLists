@@ -1,5 +1,5 @@
 import {Component} from '@angular/core';
-import { FormGroup, FormControl } from '@angular/forms';
+import { FormGroup, FormControl, Validators } from '@angular/forms';
 
 @Component({
   selector: 'cl-contact-item-form',
@@ -43,8 +43,11 @@ export class ContactItemFormComponent {
 
     // initialize form
     this.form = new FormGroup({
-     fname: new FormControl(''),
-      lname: new FormControl(''),
+     fname: new FormControl('', Validators.compose([
+       Validators.required,
+       Validators.pattern('[A-z][a-z]+')])),
+      lname: new FormControl('', Validators.compose([
+        Validators.required, Validators.pattern('[A-Z][\'a-zA-Z]+')])),
       relationship: new FormControl('friend'),
       month: new FormControl(''),
       day: new FormControl(''),
@@ -57,6 +60,8 @@ export class ContactItemFormComponent {
       email1: new FormControl(''),
       email2: new FormControl('')
     });
-
+  } // End of ngOnInit()
+  onSubmit(contactItem: any) {
+    console.log(contactItem);
   }
 } // End of ContactItemFormComponent class
