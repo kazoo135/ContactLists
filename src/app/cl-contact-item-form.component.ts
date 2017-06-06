@@ -55,8 +55,10 @@ export class ContactItemFormComponent {
       street: new FormControl(''),
       city: new FormControl(''),
       state: new FormControl(''),
-      hmPhone: new FormControl(''),
-      wkPhone: new FormControl(''),
+      hmPhone: new FormControl('', Validators.compose([
+        Validators.required,
+      Validators.pattern('1?\+?[0-9]{3}-[0-9]{3}-[0-9]{4}')])),
+      wkPhone: new FormControl('', Validators.pattern('1?\+?[0-9]{3}-[0-9]{3}-[0-9]{4}')),
       email1: new FormControl(''),
       email2: new FormControl('')
     });
