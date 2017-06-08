@@ -1,5 +1,6 @@
 <section id="formSection">
-  <form [formGroup]="form"
+  <form
+    [formGroup]="form"
   (ngSubmit)="onSubmit(form.value)">
     <div class="grid_row">
       <div class="grid_item">
@@ -8,6 +9,8 @@
           <label>First Name:</label><br>
           <input type="text" name="fname" id="fname" formControlName="fname">
         </p>
+        <p *ngIf="form.controls.fname.errors" class="errors">Invalid Name</p>
+
         <p>
           <label for="lname">Last Name:</label><br>
           <input type="text" name="lname" id="lname" formControlName="lname">

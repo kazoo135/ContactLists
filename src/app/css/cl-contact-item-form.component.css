@@ -22,6 +22,9 @@
   margin-top: 15px;
 
 }
+.errors{
+  color:red;
+}
 
 @media all and (max-width: 560px){
   .grid_row{
