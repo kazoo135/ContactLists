@@ -7,7 +7,7 @@ import { AppComponent }  from './app.component';
 import { ContactItemComponent } from './cl-contact-item.component';
 import { ContactItemListComponent} from './cl-contact-item-list.component';
 import { ContactItemFormComponent } from './cl-contact-item-form.component';
-
+import { ContactItemService } from './cl-contact-item.service';
 @NgModule({
   imports: [BrowserModule,
     ReactiveFormsModule],
@@ -15,6 +15,7 @@ import { ContactItemFormComponent } from './cl-contact-item-form.component';
     ContactItemComponent,
   ContactItemListComponent,
   ContactItemFormComponent],
+  providers: [ContactItemService],
   bootstrap: [AppComponent]
 })
 

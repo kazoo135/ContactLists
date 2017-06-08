@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
+import { ContactItemService } from './cl-contact-item.service';
 
 @Component({
   selector: 'cl-contact-item-form',
@@ -8,6 +9,7 @@ import { FormGroup, FormControl, Validators } from '@angular/forms';
 })
 
 export class ContactItemFormComponent {
+
   months: any[];
   days: any;
   years: any;
@@ -32,6 +34,9 @@ export class ContactItemFormComponent {
       name: 'California',
       abbr: 'CA'
     }];
+
+  constructor( private contactItemService: ContactItemService) {}
+
 // TODO write a function that initializes years property
 // TODO write a function that initializes days propery
   ngOnInit() {
@@ -63,7 +68,9 @@ export class ContactItemFormComponent {
       email2: new FormControl('')
     });
   } // End of ngOnInit()
+
   onSubmit(contactItem: any) {
     console.log(contactItem);
+    this.contactItemService.add(contactItem);
   }
 } // End of ContactItemFormComponent class
