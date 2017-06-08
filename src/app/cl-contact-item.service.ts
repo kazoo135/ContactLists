@@ -69,6 +69,5 @@ export class ContactItemService {
     if ( index >= 0) {
       this.contactItems.splice(index, 1);
     }
-
   }
 }

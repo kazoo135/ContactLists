@@ -1,6 +1,10 @@
-import {Component} from '@angular/core';
+import {Component, Inject } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactItemService } from './cl-contact-item.service';
+import { monthsListToken } from './providers';
+import { daysListToken } from './providers';
+import { yearsListToken } from './providers';
+
 
 @Component({
   selector: 'cl-contact-item-form',
@@ -10,9 +14,7 @@ import { ContactItemService } from './cl-contact-item.service';
 
 export class ContactItemFormComponent {
 
-  months = [ 'January', 'Feburary', 'March', 'April', 'May', 'June',
-    'July', 'August', 'September', 'October', 'November', 'December'];
-  days = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+
   years =  ['2001', '2002', '2003', '2004', '2006'];
   form: any;
   states = [{
@@ -36,7 +38,11 @@ export class ContactItemFormComponent {
       abbr: 'CA'
     }];
 
-  constructor( private contactItemService: ContactItemService) {}
+  constructor( private contactItemService: ContactItemService,
+  @Inject(monthsListToken) public monthsList: any,
+  @Inject(daysListToken) public daysList: any,
+  @Inject(yearsListToken) public yearsList: any) {}
+
   ngOnInit() {
     // initialize form
     this.form = new FormGroup({
@@ -56,8 +62,8 @@ export class ContactItemFormComponent {
         Validators.required,
       Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')])),
       wkPhone: new FormControl('', Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')),
-      email1: new FormControl(''),
-      email2: new FormControl('')
+      primary: new FormControl(''),
+      secondary: new FormControl('')
     });
   } // End of ngOnInit()
 

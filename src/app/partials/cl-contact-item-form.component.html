@@ -26,16 +26,16 @@
         <h3>Birthday</h3>
         <p class="bDay"><label>Month</label><br>
           <select name="month" id="month" formControlName="month">
-            <option *ngFor="let month of months">{{month}}</option>
+            <option *ngFor="let month of monthsList.months" value="{{month}}">{{month}}</option>
           </select>
         </p>
         <p class="bDay"><label>Day</label><br>
           <select name="day" id="day" formControlName="day">
-            <option *ngFor="let day of days">{{ day }}</option>
+            <option *ngFor="let day of daysList.days" value="{{day}}">{{ day }}</option>
           </select></p>
         <p class="bDay"><label>Year</label><br>
           <select name="year" id="year" formControlName="year">
-            <option *ngFor="let year of years">{{ year }}</option>
+            <option *ngFor="let year of yearsList.years" value="{{ year }}">{{ year }}</option>
           </select></p>
       </div>
       <div class="grid_item">
@@ -70,11 +70,11 @@
         <h3>Email</h3>
         <p>
           <label>Primary</label><br>
-          <input type="email" name="email1" id="email1" formControlName="email1">
+          <input type="email" name="email1" id="email1" formControlName="primary">
         </p>
         <p>
           <label>Secondary</label><br>
-          <input type="email" name="email2" id="email2" formControlName="email2">
+          <input type="email" name="email2" id="email2" formControlName="secondary">
         </p>
       </div>
 
