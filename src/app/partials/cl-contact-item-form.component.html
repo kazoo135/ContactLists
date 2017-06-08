@@ -5,16 +5,19 @@
     <div class="grid_row">
       <div class="grid_item">
         <h3>Contact Name</h3>
-        <p>
+        <p class="firsname">
           <label>First Name:</label><br>
           <input type="text" name="fname" id="fname" formControlName="fname">
         </p>
-        <p *ngIf="form.controls.fname.errors" class="errors">Invalid Name</p>
-
-        <p>
+        <p *ngIf="form.controls.fname.errors?.pattern" class="errors">
+          Invalid Name Format</p>
+        <p class="lastname">
           <label for="lname">Last Name:</label><br>
           <input type="text" name="lname" id="lname" formControlName="lname">
         </p>
+        <p *ngIf="form.controls.lname.errors?.pattern" class="errors">
+          Invalid Name Format</p>
+        <p>
         <h3>Relationship</h3>
         <input type="radio" id="friend" name="relationship" value="friend" formControlName="relationship"><label>Friend</label>
         <input type="radio" id="family" name="relationship" value="family" formControlName="relationship"><label>Family</label>
@@ -52,12 +55,16 @@
       </div>
       <div  class="grid_item" id="phone">
         <h3>Phone</h3>
-        <p>
+        <p class="homePhone">
           <label>Home:</label><br>
           <input type="text" id="hmPhone" name="hmPhone" formControlName="hmPhone">
         </p>
-        <p><label>Work</label><br>
+        <p *ngIf="form.controls.hmPhone.errors?.pattern" class="errors">
+          Invalid Phone Format</p>
+        <p class="workPhone"><label>Work</label><br>
           <input type="text" id="wkPhone" name="wkPhone" formControlName="wkPhone"></p>
+        <p *ngIf="form.controls.wkPhone.errors?.pattern" class="errors">
+          Invalid Phone Format</p>
       </div>
       <div class="grid_item">
         <h3>Email</h3>
