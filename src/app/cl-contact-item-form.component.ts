@@ -10,9 +10,10 @@ import { ContactItemService } from './cl-contact-item.service';
 
 export class ContactItemFormComponent {
 
-  months: any[];
-  days: any;
-  years: any;
+  months = [ 'January', 'Feburary', 'March', 'April', 'May', 'June',
+    'July', 'August', 'September', 'October', 'November', 'December'];
+  days = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
+  years =  ['2001', '2002', '2003', '2004', '2006'];
   form: any;
   states = [{
     name: 'Alabama',
@@ -36,16 +37,7 @@ export class ContactItemFormComponent {
     }];
 
   constructor( private contactItemService: ContactItemService) {}
-
-// TODO write a function that initializes years property
-// TODO write a function that initializes days propery
   ngOnInit() {
-    this.months = [ 'January', 'Feburary', 'March', 'April', 'May', 'June',
-      'July', 'August', 'September', 'October', 'November', 'December'];
-    // TODO eventually I want to figure out how to initialize days and years with loops
-    this.days = ['1', '2', '3', '4', '5', '6', '7', '8', '9'];
-    this.years = ['2001', '2002', '2003', '2004', '2006'];
-
     // initialize form
     this.form = new FormGroup({
      fname: new FormControl('', Validators.compose([
