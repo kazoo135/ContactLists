@@ -13,8 +13,12 @@ export class ContactItemListComponent {
       id: 1,
       firstname: 'Ben',
       lastname: 'Sargent',
-      birthday: 'Jan 9 1967',
       relationship: 'friend',
+      birthday: {
+        month: 'January',
+        day: '9',
+        year: '1967'
+      },
       addr: {
         street: '23 Maple Road',
         city: 'Littleton',
@@ -35,8 +39,12 @@ export class ContactItemListComponent {
       id: 2,
       firstname: 'Sal',
       lastname: 'Caruso',
-      birthday: 'Oct. 18 1926',
       relationship: 'family',
+      birthday: {
+        month: 'October',
+        day: '18',
+        year: '1925'
+      },
       addr: {
         street: '23 faner Rd.',
         city: 'Wycoff',
