@@ -22,7 +22,12 @@
   margin-top: 15px;
 
 }
+
+.firsname, .lastname, .homePhone, .workPhone{
+  margin-bottom: 0%;
+}
 .errors{
+  margin-top: 0%;
   color:red;
 }
 
