@@ -55,8 +55,8 @@ export class ContactItemFormComponent {
         Validators.required,
       Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')])),
       wkPhone: new FormControl('', Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')),
-      email1: new FormControl(''),
-      email2: new FormControl('')
+      primary: new FormControl(''),
+      secondary: new FormControl('')
     });
   } // End of ngOnInit()
 
