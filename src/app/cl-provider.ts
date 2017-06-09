@@ -10,10 +10,20 @@ export const monthsList = {
     'September', 'October', 'November', 'December']
 };
 
+const numDays = [];
+for (let i = 0; i < 32; i++) {
+  numDays.push(i);
+}
 export const daysList = {
-  days: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  days: numDays
 };
 
+const numYears = [];
+for ( let k = 1942; k < 2020; k++ ) {
+  numYears.push(k);
+}
 export const yearsList = {
-  years: ['2001', '2002', '2003', '2004', '2006']
+  years: numYears
 };
+
+

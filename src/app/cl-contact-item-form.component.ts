@@ -51,9 +51,11 @@ export class ContactItemFormComponent {
       street: new FormControl(''),
       city: new FormControl(''),
       state: new FormControl(''),
+      zipcode: new FormControl('', Validators.pattern('[0-9]{5}')),
       hmPhone: new FormControl('', Validators.compose([
         Validators.required,
       Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')])),
+      mPhone: new FormControl(''),
       wkPhone: new FormControl('', Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')),
       primary: new FormControl(''),
       secondary: new FormControl('')

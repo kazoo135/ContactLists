@@ -52,6 +52,10 @@
             <option *ngFor="let state of states">{{ state.name }}</option>
           </select>
         </p>
+        <p><label>Zipcode:</label><br>
+          <input type="text" id="zipcode" name="zipcode" formControlName="zipcode">
+        </p>
+        <p *ngIf="form.controls.zipcode.errors?.pattern" class="errors">Invalid character</p>
       </div>
     </div>
     <div class="grid_row">
@@ -63,10 +67,14 @@
         </p>
         <p *ngIf="form.controls.hmPhone.errors?.pattern" class="errors">
           Invalid Phone Format</p>
+        <p><label>Mobile</label><br>
+          <input type="text" id="mPhone" name="mPhone" formControlName="mPhone">
+        </p>
         <p class="workPhone"><label>Work</label><br>
           <input type="text" id="wkPhone" name="wkPhone" formControlName="wkPhone"></p>
         <p *ngIf="form.controls.wkPhone.errors?.pattern" class="errors">
           Invalid Phone Format</p>
+
       </div>
       <div class="grid_item">
         <h3>Email</h3>
