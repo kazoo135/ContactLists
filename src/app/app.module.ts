@@ -8,9 +8,11 @@ import { ContactItemComponent } from './cl-contact-item.component';
 import { ContactItemListComponent} from './cl-contact-item-list.component';
 import { ContactItemFormComponent } from './cl-contact-item-form.component';
 import { ContactItemService } from './cl-contact-item.service';
-import { monthsListToken, monthsList } from './providers';
-import { daysListToken, daysList } from './providers';
-import { yearsListToken, yearsList } from './providers';
+
+import { monthsListToken, monthsList } from './cl-provider';
+import { daysListToken, daysList } from './cl-provider';
+import { yearsListToken, yearsList } from './cl-provider';
+
 
 @NgModule({
   imports: [BrowserModule,
@@ -20,7 +22,7 @@ import { yearsListToken, yearsList } from './providers';
   ContactItemListComponent,
   ContactItemFormComponent],
   providers: [ContactItemService,
-    { provide: monthsListToken, useValue: monthsList },
+    { provide: monthsListToken, useValue: monthsList},
     { provide: daysListToken, useValue: daysList },
     { provide: yearsListToken, useValue: yearsList}
     ],

@@ -1,9 +1,8 @@
-import {Component, Inject } from '@angular/core';
+
+import {Component, Inject} from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { ContactItemService } from './cl-contact-item.service';
-import { monthsListToken } from './providers';
-import { daysListToken } from './providers';
-import { yearsListToken } from './providers';
+import { monthsListToken, daysListToken, yearsListToken } from './cl-provider';
 
 
 @Component({
@@ -14,8 +13,6 @@ import { yearsListToken } from './providers';
 
 export class ContactItemFormComponent {
 
-
-  years =  ['2001', '2002', '2003', '2004', '2006'];
   form: any;
   states = [{
     name: 'Alabama',
@@ -41,7 +38,7 @@ export class ContactItemFormComponent {
   constructor( private contactItemService: ContactItemService,
   @Inject(monthsListToken) public monthsList: any,
   @Inject(daysListToken) public daysList: any,
-  @Inject(yearsListToken) public yearsList: any) {}
+               @Inject(yearsListToken) public yearsList: any ) {}
 
   ngOnInit() {
     // initialize form
@@ -58,9 +55,11 @@ export class ContactItemFormComponent {
       street: new FormControl(''),
       city: new FormControl(''),
       state: new FormControl(''),
+      zipcode: new FormControl('', Validators.pattern('[0-9]{5}')),
       hmPhone: new FormControl('', Validators.compose([
         Validators.required,
       Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')])),
+      mPhone: new FormControl(''),
       wkPhone: new FormControl('', Validators.pattern('[0-9]{3}-[0-9]{3}-[0-9]{4}')),
       primary: new FormControl(''),
       secondary: new FormControl('')

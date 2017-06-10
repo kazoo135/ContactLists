@@ -44,7 +44,7 @@ export class ContactItemService {
         street: '23 faner Rd.',
         city: 'Wycoff',
         state: 'New Jersery',
-        zipcode: '00012'
+        zipcode: '10018'
       },
       phone: {
         home: '345-444-3333',
@@ -61,7 +61,36 @@ export class ContactItemService {
     return this.contactItems;
   }
   add(contactItem: any) {
-    this.contactItems.push(contactItem);
+    // TODO I need to construct the contactItems object out of the form values returned
+    // then push it onto this contactItems array of objects.
+    let newContact: any = {
+      firstname: contactItem.fname,
+      lastname: contactItem.lname,
+      relationship: contactItem.relationship,
+      birthday: {
+        month: contactItem.month,
+        day: contactItem.day,
+        year: contactItem.year
+      },
+        addr: {
+          street: contactItem.street,
+          city: contactItem.city,
+          state: contactItem.state,
+          zipcode: contactItem.zipcode
+        },
+        phone: {
+          home: contactItem.hmPhone,
+          mobile: contactItem.mPhone,
+          work: contactItem.wkPhone
+        },
+        mail: {
+          primary: contactItem.primary,
+          secondary: contactItem.secondary
+        }
+    };
+
+
+    this.contactItems.push(newContact);
   }
 
   delete(contactItem: any) {
